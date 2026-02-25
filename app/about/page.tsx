@@ -10,6 +10,9 @@ import {
   Users,
   Clock,
   ArrowRight,
+  BookOpen,
+  BadgeCheck,
+  Stethoscope,
 } from "lucide-react"
 
 export const metadata: Metadata = {
@@ -20,36 +23,90 @@ export const metadata: Metadata = {
 
 /* ─── Data ──────────────────────────────────────────────────────────────── */
 
-const certifications = [
+const education = [
   {
     icon: GraduationCap,
-    title: "MBBS, MS (General Surgery)",
-    detail: "All India Institute of Medical Sciences, New Delhi",
+    title: "M.Ch. Plastic, Reconstructive & Aesthetic Surgery",
+    detail: "ABVIMS & Dr. RML Hospital, New Delhi (2022\u20132025)",
+  },
+  {
+    icon: GraduationCap,
+    title: "M.S. General Surgery",
+    detail: "S.N. Medical College, Agra (2017\u20132020)",
+  },
+  {
+    icon: GraduationCap,
+    title: "MBBS",
+    detail: "S.N. Medical College, Agra (2010\u20132016)",
   },
   {
     icon: Award,
-    title: "MCh (Plastic & Reconstructive Surgery)",
-    detail: "Postgraduate Institute of Medical Education & Research, Chandigarh",
+    title: "Fellowship in Aesthetic Surgery",
+    detail: "Gurugram (May\u2013Jul 2025)",
+  },
+]
+
+const memberships = [
+  {
+    icon: BadgeCheck,
+    title: "International Society of Aesthetic Plastic Surgery",
+    detail: "ISAPS \u2014 No. 25191",
   },
   {
     icon: ShieldCheck,
-    title: "Board Certified — ISAPS Member",
-    detail:
-      "International Society of Aesthetic Plastic Surgery, full member since 2012",
+    title: "Association of Plastic Surgeons of India",
+    detail: "APSI \u2014 APSI2248",
   },
   {
-    icon: HeartPulse,
-    title: "Fellowship in Microsurgery",
-    detail:
-      "Advanced fellowship in microvascular free-flap reconstruction, Seoul National University Hospital",
+    icon: ShieldCheck,
+    title: "Indian Association of Aesthetic Plastic Surgeons",
+    detail: "IAAPS \u2014 2024/UP/65",
+  },
+  {
+    icon: BadgeCheck,
+    title: "Uttar Pradesh & Delhi Medical Councils",
+    detail: "UP Reg. 73672 \u00B7 DMC Reg. 78286",
+  },
+]
+
+const awardsAndContributions = [
+  {
+    icon: Award,
+    title: "1st Prize \u2014 Poster Presentation",
+    detail: "AFPSRM 2024",
+  },
+  {
+    icon: BookOpen,
+    title: "Invited Delegate",
+    detail: "HAIRCON 2025",
+  },
+  {
+    icon: Stethoscope,
+    title: "Cadaveric Dissection Workshop on Facial Aesthetics",
+    detail: "IAAPS-ISAPS, 2024",
+  },
+  {
+    icon: BookOpen,
+    title: "Hands-on Training in Hair Transplantation",
+    detail: "Enhance Clinic, Kolkata (2024)",
+  },
+  {
+    icon: Award,
+    title: "Paper Presenter",
+    detail: "AESUR 2024 \u00B7 APSICON 2023",
+  },
+  {
+    icon: Stethoscope,
+    title: "Free Flap Microvascular Workshop",
+    detail: "2019",
   },
 ]
 
 const stats = [
-  { value: "20+", label: "Years of Practice" },
-  { value: "10,000+", label: "Successful Procedures" },
-  { value: "74", label: "Advanced Techniques" },
-  { value: "98%", label: "Patient Satisfaction" },
+  { value: "15+", label: "Years in Medicine" },
+  { value: "5+", label: "Professional Memberships" },
+  { value: "6+", label: "Academic Presentations" },
+  { value: "100%", label: "Patient-First Approach" },
 ]
 
 /* ─── Page ──────────────────────────────────────────────────────────────── */
@@ -106,10 +163,10 @@ export default function AboutPage() {
                 {/* Floating experience badge */}
                 <div className="absolute -bottom-6 -right-6 border border-border bg-card p-8 shadow-lg md:bottom-8 md:right-[-40px]">
                   <span className="font-[var(--font-cormorant)] text-5xl font-light text-rose-gold">
-                    20+
+                    15+
                   </span>
                   <p className="mt-1 font-[var(--font-montserrat)] text-xs uppercase tracking-widest text-charcoal-light">
-                    Years of Excellence
+                    Years in Medicine
                   </p>
                 </div>
               </div>
@@ -127,25 +184,43 @@ export default function AboutPage() {
                   Dr. Swikriti Raniwala
                 </h2>
                 <p className="mb-8 font-[var(--font-montserrat)] text-xs font-semibold uppercase tracking-[0.2em] text-rose-gold">
-                  MCh Plastic Surgery &bull; ISAPS Member
+                  M.Ch. Plastic Surgery &bull; ISAPS &bull; APSI
                 </p>
 
                 <p className="mb-6 font-[var(--font-montserrat)] text-sm leading-relaxed text-charcoal-light">
-                  With over two decades of experience in aesthetic and
-                  reconstructive surgery, Dr. Raniwala is recognized for her
-                  meticulous technique, artistic sensibility, and unwavering
-                  commitment to patient safety. Her philosophy centers on
-                  achieving natural, harmonious results that enhance each
-                  patient&apos;s unique features rather than conforming to a
-                  single standard of beauty.
+                  Trained at ABVIMS & Dr. RML Hospital, New Delhi, and further
+                  refined through a dedicated Fellowship in Aesthetic Surgery at
+                  Gurugram, Dr. Raniwala brings a rare blend of precision and
+                  artistry to every procedure. Her clinical foundation spans
+                  cosmetic breast surgery, body contouring, facial aesthetics,
+                  trauma reconstruction, burns, and hand surgery.
                 </p>
-                <p className="mb-10 font-[var(--font-montserrat)] text-sm leading-relaxed text-charcoal-light">
-                  Trained at India&apos;s premier medical institutions and
-                  further honed through international fellowships, she brings a
-                  global perspective to every consultation. Her areas of special
-                  interest include rhinoplasty, breast aesthetics, hair
-                  restoration, and complex reconstructive microsurgery.
+                <p className="mb-6 font-[var(--font-montserrat)] text-sm leading-relaxed text-charcoal-light">
+                  Beyond the operating theatre, she maintains an active
+                  consultative practice encompassing advanced lasers, Botox,
+                  dermal fillers, PRP therapies, and comprehensive post-operative
+                  care &mdash; ensuring every patient receives end-to-end
+                  guidance from consultation through recovery.
                 </p>
+
+                {/* Core competencies */}
+                <div className="mb-10 grid grid-cols-2 gap-x-6 gap-y-2">
+                  {[
+                    "Breast Augmentation & Reduction",
+                    "Liposuction & Gynecomastia",
+                    "Facial Aesthetic Surgery",
+                    "Body Contouring",
+                    "Botox, Fillers, PRP & Lasers",
+                    "Reconstructive & Microsurgery",
+                  ].map((item) => (
+                    <div key={item} className="flex items-center gap-2">
+                      <div className="h-1 w-1 shrink-0 rounded-full bg-rose-gold" />
+                      <span className="font-[var(--font-montserrat)] text-xs text-charcoal-light">
+                        {item}
+                      </span>
+                    </div>
+                  ))}
+                </div>
 
                 <Link
                   href="#contact"
@@ -159,7 +234,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* ── Certifications ──────────────────────────────────────────── */}
+        {/* ── Credentials ─────────────────────────────────────────────── */}
         <section className="border-t border-border bg-cream-dark py-24 lg:py-32">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mb-16 text-center">
@@ -178,8 +253,12 @@ export default function AboutPage() {
               </h2>
             </div>
 
-            <div className="grid gap-8 md:grid-cols-2">
-              {certifications.map((cert, index) => {
+            {/* Education & Fellowship */}
+            <h3 className="mb-6 font-[var(--font-montserrat)] text-xs font-semibold uppercase tracking-[0.25em] text-charcoal-light">
+              Education & Fellowship
+            </h3>
+            <div className="mb-14 grid gap-8 md:grid-cols-2">
+              {education.map((cert, index) => {
                 const Icon = cert.icon
                 return (
                   <article
@@ -190,11 +269,84 @@ export default function AboutPage() {
                       <Icon className="h-6 w-6 text-rose-gold" />
                     </div>
                     <div>
-                      <h3 className="mb-1 font-[var(--font-cormorant)] text-xl font-semibold text-charcoal">
+                      <h4 className="mb-1 font-[var(--font-cormorant)] text-xl font-semibold text-charcoal">
                         {cert.title}
-                      </h3>
+                      </h4>
                       <p className="font-[var(--font-montserrat)] text-sm leading-relaxed text-charcoal-light">
                         {cert.detail}
+                      </p>
+                    </div>
+                  </article>
+                )
+              })}
+            </div>
+
+            {/* Professional Memberships */}
+            <h3 className="mb-6 font-[var(--font-montserrat)] text-xs font-semibold uppercase tracking-[0.25em] text-charcoal-light">
+              Professional Memberships
+            </h3>
+            <div className="grid gap-8 md:grid-cols-2">
+              {memberships.map((cert, index) => {
+                const Icon = cert.icon
+                return (
+                  <article
+                    key={index}
+                    className="group flex gap-6 border border-border bg-card p-8 transition-all duration-300 hover:border-rose-gold/40 hover:shadow-md"
+                  >
+                    <div className="flex h-14 w-14 shrink-0 items-center justify-center border border-rose-gold/30 transition-all duration-300 group-hover:border-rose-gold group-hover:bg-rose-gold/10">
+                      <Icon className="h-6 w-6 text-rose-gold" />
+                    </div>
+                    <div>
+                      <h4 className="mb-1 font-[var(--font-cormorant)] text-xl font-semibold text-charcoal">
+                        {cert.title}
+                      </h4>
+                      <p className="font-[var(--font-montserrat)] text-sm leading-relaxed text-charcoal-light">
+                        {cert.detail}
+                      </p>
+                    </div>
+                  </article>
+                )
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* ── Awards & Academic Contributions ─────────────────────────── */}
+        <section className="border-t border-border bg-background py-24 lg:py-32">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="mb-16 text-center">
+              <div className="mb-4 flex items-center justify-center gap-4">
+                <div className="h-px w-12 bg-rose-gold" />
+                <span className="font-[var(--font-montserrat)] text-xs font-semibold uppercase tracking-[0.3em] text-rose-gold">
+                  Achievements
+                </span>
+                <div className="h-px w-12 bg-rose-gold" />
+              </div>
+              <h2 className="font-[var(--font-cormorant)] text-4xl font-light text-charcoal md:text-5xl">
+                <span className="text-balance">
+                  Awards & Academic{" "}
+                  <span className="italic text-rose-gold">Contributions</span>
+                </span>
+              </h2>
+            </div>
+
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {awardsAndContributions.map((item, index) => {
+                const Icon = item.icon
+                return (
+                  <article
+                    key={index}
+                    className="group flex gap-5 border border-border bg-card p-6 transition-all duration-300 hover:border-rose-gold/40 hover:shadow-md"
+                  >
+                    <div className="flex h-11 w-11 shrink-0 items-center justify-center border border-rose-gold/30 transition-all duration-300 group-hover:border-rose-gold group-hover:bg-rose-gold/10">
+                      <Icon className="h-5 w-5 text-rose-gold" />
+                    </div>
+                    <div>
+                      <h4 className="mb-0.5 font-[var(--font-cormorant)] text-lg font-semibold text-charcoal">
+                        {item.title}
+                      </h4>
+                      <p className="font-[var(--font-montserrat)] text-xs leading-relaxed text-charcoal-light">
+                        {item.detail}
                       </p>
                     </div>
                   </article>
@@ -226,7 +378,7 @@ export default function AboutPage() {
 
             <p className="mt-8 font-[var(--font-montserrat)] text-sm leading-relaxed text-cream/60">
               Every procedure we perform is guided by this principle. We believe
-              that true beauty is not manufactured — it is revealed through
+              that true beauty is not manufactured &mdash; it is revealed through
               careful, considered enhancement that respects the individual.
             </p>
           </div>
@@ -275,8 +427,8 @@ export default function AboutPage() {
                 <p className="mb-6 font-[var(--font-montserrat)] text-sm leading-relaxed text-charcoal-light">
                   SWI Infinity operates from a state-of-the-art facility in
                   Gurugram, designed to combine clinical excellence with a calm,
-                  reassuring atmosphere. Every detail — from our consultation
-                  suites to our operating theatres — has been crafted to ensure
+                  reassuring atmosphere. Every detail &mdash; from our consultation
+                  suites to our operating theatres &mdash; has been crafted to ensure
                   patient comfort and surgeon precision.
                 </p>
                 <p className="mb-10 font-[var(--font-montserrat)] text-sm leading-relaxed text-charcoal-light">
