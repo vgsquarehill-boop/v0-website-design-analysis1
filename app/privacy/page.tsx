@@ -409,6 +409,20 @@ export default function PrivacyPolicyPage() {
               the courts in Gurugram, Haryana, India.
             </p>
           </div>
+
+          {/* Cross-reference to Terms */}
+          <div className="mt-10 text-center">
+            <p className="font-[var(--font-montserrat)] text-[15px] text-charcoal-light leading-relaxed">
+              Please also review our{" "}
+              <Link
+                href="/terms"
+                className="text-rose-gold underline underline-offset-2 hover:text-rose-gold-dark"
+              >
+                Terms of Service
+              </Link>{" "}
+              which govern your use of the SWI Infinity website and services.
+            </p>
+          </div>
         </section>
       </main>
 
