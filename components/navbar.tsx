@@ -30,7 +30,7 @@ const navigationItems = [
   { label: "Procedures", href: "/procedures", hasMegaMenu: true },
   { label: "About", href: "/about" },
   { label: "Testimonials", href: "#testimonials" },
-  { label: "Contact", href: "#contact" },
+  { label: "Contact", href: "/contact" },
 ] as const
 
 /* ─────────────────────────────────────────────────────────────────────────────
