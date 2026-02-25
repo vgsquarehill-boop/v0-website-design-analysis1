@@ -28,7 +28,7 @@ import { MegaDropdown } from "@/components/mega-dropdown"
 const navigationItems = [
   { label: "Home", href: "/" },
   { label: "Procedures", href: "/procedures", hasMegaMenu: true },
-  { label: "About", href: "#about" },
+  { label: "About", href: "/about" },
   { label: "Testimonials", href: "#testimonials" },
   { label: "Contact", href: "#contact" },
 ] as const
